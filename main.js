@@ -18,7 +18,7 @@ form.onsubmit = async function (e) {
 
   async function getWeather(city) {
     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-    const response = await fetch(url);
+    const response = fetch(url);
     const data = await response.json();
     console.log(data);
     return data;
